@@ -51,7 +51,7 @@ apt-get install neofetch
  
 echo "clear" >> .bashrc
 echo 'echo -e "Welcome to the server $ HOSTNAME"' >> .bashrc
-echo 'echo -e "Script mod by Pakawit Pongsing"' >> .bashrc
+echo 'echo -e "Script mod by AzRoY"' >> .bashrc
 echo 'echo -e "Type menu to display a list of commands"' >> .bashrc
 echo 'echo -e ""' >> .bashrc
  
@@ -73,7 +73,7 @@ wget -O /etc/openvpn/1194.conf "http://vira.cf/1194.conf"
 service openvpn restart
 sysctl -w net.ipv4.ip_forward=1
 sed -i 's/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g' /etc/sysctl.conf
-iptables -t nat -I POSTROUTING -s 192.168.100.0/24 -o eth0 -j MASQUERADE
+iptables -t nat -I POSTROUTING -s 172.16.10.0/24 -o eth0 -j MASQUERADE
 iptables-save > /etc/iptables_yg_baru_dibikin.conf
 wget -O /etc/network/if-up.d/iptables "http://vira.cf/iptables"
 chmod +x /etc/network/if-up.d/iptables
@@ -200,7 +200,7 @@ echo "Timezone : Asia/Malaysia (GMT +8)"  | tee -a log-install.txt
 echo "IPv6     : [off]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Original Script by Fornesia, Rzengineer & Fawzya"  | tee -a log-install.txt
-echo "Modified by Bustami Arifin"  | tee -a log-install.txt
+echo "Modified by AzRoY"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "Log Instalasi --> /root/log-install.txt"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
